@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@ant-design/icons':
     specifier: ^5.2.6
@@ -7,6 +11,9 @@ dependencies:
   antd:
     specifier: ^5.12.2
     version: 5.12.2(react-dom@18.2.0)(react@18.2.0)
+  jssha:
+    specifier: ^3.3.1
+    version: 3.3.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1774,6 +1781,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: true
+
+  /jssha@3.3.1:
+    resolution: {integrity: sha512-VCMZj12FCFMQYcFLPRm/0lOBbLi8uM2BhXPTqw3U4YAfs4AZfiApOoBLoN8cQE60Z50m1MYMTQVCfgF/KaCVhQ==}
+    dev: false
 
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
