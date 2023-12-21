@@ -11,3 +11,13 @@ export type LoginUserDto = {
      */
     password: string;
 }
+
+
+export interface LoginFormProps {
+    /**登入按鈕
+     * 
+     * @param values 
+     * @returns 
+     */
+    onFinish: (values: any) => void;
+}

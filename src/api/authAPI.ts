@@ -8,5 +8,8 @@ import { LoginUserDto } from '../models/apiModels'
  * @returns 登入結果
  */
 export const apiLogin = (data: LoginUserDto) => {
-    return req.post(`/auth/login`, data, undefined)
+    return req.post(`/auth/login`, data, {
+        credentials: 'include',
+        withCredentials: true
+    })
 }
