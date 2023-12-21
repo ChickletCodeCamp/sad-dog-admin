@@ -50,7 +50,7 @@ const get = async (url: string, data: any, config = {}) => {
 };
 
 // HTTP POST request
-const post = async (url: string, data = null, config = {}) => {
+const post = async (url: string, data: object, config = {}) => {
     try {
         const response = await fetch(`${apiURL}${url}`, {
             method: 'POST',
@@ -79,7 +79,7 @@ const deleteRequest = async (url: string, data: any = null, config = {}) => {
 };
 
 // HTTP PUT request
-const put = async (url: string, data = null, config = {}) => {
+const put = async (url: string, data: object, config = {}) => {
     try {
         const response = await fetch(`${apiURL}${url}`, {
             method: 'PUT',
