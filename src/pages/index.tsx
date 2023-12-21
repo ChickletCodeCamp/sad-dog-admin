@@ -1,19 +1,25 @@
-import { useState, useEffect } from "react";
 import { BasicLayout } from "../layouts";
 import { apiGetHelloSadDog } from "../api/defaultApi";
+import { useQuery, QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 const Page = () => {
-  const [helloSadDog, setHelloSadDog] = useState("");
+  const { data, isLoading } = useQuery("getHelloSadDog", apiGetHelloSadDog);
 
-  useEffect(() => {
-    apiGetHelloSadDog("").then(setHelloSadDog);
-  }, []);
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <BasicLayout.Layout>
-      <div>{helloSadDog}</div>
+      <div>{data}</div>
     </BasicLayout.Layout>
   );
 };
 
-export default Page;
+const PageWithQueryProvider = () => (
+  <QueryClientProvider client={queryClient}>
+    <Page />
+  </QueryClientProvider>
+);
+
+export default PageWithQueryProvider;
