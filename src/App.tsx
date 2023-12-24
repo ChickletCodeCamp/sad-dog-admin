@@ -1,10 +1,14 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./router"; // Adjust the path as needed
 import "./App.css";
-// import Page from './pages';
-import Login from "./pages/Login/Login";
 
 const App = () => {
-  // return <Page />;
-  return <Login />;
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
 };
 
 export default App;
