@@ -1,5 +1,6 @@
 import { CONFIG } from '../constants/config';
 import { getAuthorizationHeader } from './getAuthorizationHeader';
+import { useNavigate } from 'react-router-dom';
 
 const { apiURL } = CONFIG;
 
@@ -14,8 +15,17 @@ const handleResponse = async (response: any) => {
 
 // Helper function to handle errors
 const handleError = (error: any) => {
+    const navigate = useNavigate();
+
     if (error.response) {
         switch (error.response.status) {
+            case 401: // 或者 403，視您的 API 設定而定
+                // 檢查當前路徑是否已經在登入頁面
+                if (window.location.pathname !== '/login') {
+                    console.log('無權限，重新導向到登入頁面');
+                    navigate('/login');
+                }
+                break;
             case 404:
                 console.log('你要找的頁面不存在');
                 break;
@@ -26,11 +36,14 @@ const handleError = (error: any) => {
                 console.log(error.message);
         }
     }
+
     if (!window.navigator.onLine) {
         alert('網路出了點問題，請重新連線後重整網頁');
     }
+
     throw error;
 };
+
 
 // Configuring headers
 const headers = new Headers(getAuthorizationHeader());
