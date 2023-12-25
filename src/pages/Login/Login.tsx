@@ -6,6 +6,7 @@ import { LoginUserDto } from "../../models/apiModels";
 import { apiLogin } from "../../api/authAPI";
 import { routerPath } from "../../models/routerModel";
 import { Dao, CookieDao } from "../../utils/dao";
+import styles from "../../components/login/loginForm.module.css";
 
 const Login: React.FC = () => {
   const navigate = useNavigate(); // Create the navigate function
@@ -26,7 +27,11 @@ const Login: React.FC = () => {
     });
   };
 
-  return <LoginForm onFinish={handleFinish} />;
+  return (
+    <div className={styles.loginBackground}>
+      <LoginForm onFinish={handleFinish} />
+    </div>
+  );
 };
 
 export default Login;

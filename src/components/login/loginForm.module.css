@@ -26,10 +26,13 @@
   background: #5caaf1;
 }
 
-body {
-  background: url("/images/background.svg");
+.loginBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; /* 或根據需求調整 */
+  background: url("/images/background.svg") no-repeat center center;
   background-size: cover;
-  background-position: center;
 }
 
 @media (max-width: 768px) {

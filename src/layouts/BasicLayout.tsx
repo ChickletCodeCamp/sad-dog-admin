@@ -1,8 +1,17 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from "react";
+import { HeaderComponent } from "../components/layout";
 
-const Layout = ({ children }: { children: ReactNode }) => {
-  // middle ware add here, like redux, router, etc.
-  return <div>{children}</div>;
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div style={{ zIndex: 1000 }}>
+      <HeaderComponent />
+      {children}
+    </div>
+  );
 };
 
 export { Layout };
