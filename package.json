@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@types/node": "^20.10.5",
     "antd": "^5.12.2",
     "jssha": "^3.3.1",
     "react": "^18.2.0",
