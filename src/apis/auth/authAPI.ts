@@ -1,5 +1,5 @@
-import req from '../utils/fetchPlugin';
-import { LoginUserDto } from '../models/apiModels';
+import req from '../../utils/fetchPlugin';
+import { LoginUserDto } from './authType';
 
 /**login
  *
@@ -9,6 +9,6 @@ import { LoginUserDto } from '../models/apiModels';
 export const apiLogin = (data: LoginUserDto) => {
   return req.post(`/auth/login`, data, {
     credentials: 'include',
-    withCredentials: true
+    withCredentials: true,
   });
 };

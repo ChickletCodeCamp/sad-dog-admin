@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMutation } from 'react-query';
 import LoginForm from '../../components/login/LoginForm';
 import { LoginUserDto } from '../../models/apiModels';
-import { apiLogin } from '../../api/authAPI';
+import { apiLogin } from '../../apis/auth/authAPI';
 import { routerPath } from '../../models/routerModel';
 import { Dao, CookieDao } from '../../utils/dao';
 import styles from '../../components/login/loginForm.module.css';

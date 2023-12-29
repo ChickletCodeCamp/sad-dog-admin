@@ -1,5 +1,5 @@
 import { BasicLayout } from '../layouts';
-import { apiGetHelloSadDog } from '../api/defaultApi';
+import { apiGetHelloSadDog } from '../apis/defaultApi';
 import { useQuery, QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();

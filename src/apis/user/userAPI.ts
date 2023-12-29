@@ -1,5 +1,5 @@
-import req from '../utils/fetchPlugin';
-import { CreateUserDto, UpdateUserDto } from '../models/apiModels';
+import req from '../../utils/fetchPlugin';
+import { CreateUserDto, UpdateUserDto } from './userType';
 
 /**get user by id
  *
