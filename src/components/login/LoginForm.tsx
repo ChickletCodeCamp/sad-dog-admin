@@ -1,14 +1,14 @@
-import React from "react";
-import { Card, Button, Form, Input } from "antd";
-import { LoginUserDto } from "../../models/apiModels";
-import "./loginForm.css";
+import React from 'react';
+import { Card, Button, Form, Input } from 'antd';
+import { LoginUserType } from '@/apis';
+import './loginForm.css';
 
 const onFinish = (values: any) => {
-  console.log("Success:", values);
+  console.log('Success:', values);
 };
 
 const onFinishFailed = (errorInfo: any) => {
-  console.log("Failed:", errorInfo);
+  console.log('Failed:', errorInfo);
 };
 
 const LoginForm: React.FC = () => {
@@ -23,16 +23,16 @@ const LoginForm: React.FC = () => {
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
-        <Form.Item<LoginUserDto>
+        <Form.Item<LoginUserType>
           name="email"
-          rules={[{ required: true, message: "Please input your email!" }]}
+          rules={[{ required: true, message: 'Please input your email!' }]}
         >
           <Input className="from-inp" placeholder="email" />
         </Form.Item>
 
-        <Form.Item<LoginUserDto>
+        <Form.Item<LoginUserType>
           name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
+          rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input.Password className="from-inp" placeholder="password" />
         </Form.Item>
@@ -47,4 +47,4 @@ const LoginForm: React.FC = () => {
   );
 };
 
-export default LoginForm;
+export { LoginForm };
