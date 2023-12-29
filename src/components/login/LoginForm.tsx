@@ -1,7 +1,7 @@
-import React from "react";
-import { Card, Button, Form, Input } from "antd";
-import { LoginUserDto, LoginFormProps } from "../../models/apiModels";
-import styles from "./loginForm.module.css";
+import React from 'react';
+import { Card, Button, Form, Input } from 'antd';
+import { LoginUserDto, LoginFormProps } from '../../models/apiModels';
+import styles from './loginForm.module.css';
 
 const LoginForm: React.FC<LoginFormProps> = ({ onFinish }) => {
   return (
@@ -16,14 +16,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onFinish }) => {
       >
         <Form.Item<LoginUserDto>
           name="email"
-          rules={[{ required: true, message: "Please input your email!" }]}
+          rules={[{ required: true, message: 'Please input your email!' }]}
         >
           <Input className={styles.formInp} placeholder="email" />
         </Form.Item>
 
         <Form.Item<LoginUserDto>
           name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
+          rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input.Password className={styles.formInp} placeholder="password" />
         </Form.Item>

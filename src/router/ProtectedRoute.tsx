@@ -1,6 +1,6 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { Dao, CookieDao } from "../utils/dao";
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { Dao, CookieDao } from '../utils/dao';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface ProtectedRouteProps {
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const dao: Dao = new CookieDao();
 
-  const token = dao.read<boolean>("lgg");
+  const token = dao.read<boolean>('lgg');
   console.log(token);
 
   const isAuthenticated = token == true;

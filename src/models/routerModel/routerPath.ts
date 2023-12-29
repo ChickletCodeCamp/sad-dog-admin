@@ -1,4 +1,4 @@
 export enum routerPath {
-    login = '/login',
-    home = '/'
+  login = '/login',
+  home = '/'
 }

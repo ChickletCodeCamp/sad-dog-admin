@@ -1,23 +1,20 @@
-
 export type LoginUserDto = {
+  /**
+   * user email
+   */
+  email: string;
 
-    /**
-     * user email
-     */
-    email: string;
-
-    /**
-     * user password
-     */
-    password: string;
-}
-
+  /**
+   * user password
+   */
+  password: string;
+};
 
 export interface LoginFormProps {
-    /**登入按鈕
-     * 
-     * @param values 
-     * @returns 
-     */
-    onFinish: (values: any) => void;
+  /**登入按鈕
+   *
+   * @param values
+   * @returns
+   */
+  onFinish: (values: any) => void;
 }

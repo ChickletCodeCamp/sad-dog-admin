@@ -1,13 +1,13 @@
-import { createRoot } from "react-dom/client";
-import React from "react";
-import App from "./App"; // Your main App component
-import { QueryClient, QueryClientProvider } from "react-query";
-import "./index.css";
+import { createRoot } from 'react-dom/client';
+import React from 'react';
+import App from './App'; // Your main App component
+import { QueryClient, QueryClientProvider } from 'react-query';
+import './index.css';
 
 const queryClient = new QueryClient();
 
 // Get the root element from your HTML
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 
 // Check if the element exists
 if (rootElement) {
